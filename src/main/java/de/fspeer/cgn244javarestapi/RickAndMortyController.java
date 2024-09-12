@@ -24,4 +24,10 @@ public class RickAndMortyController {
     public RickAndMortyApiResponseResults getCharacter (@PathVariable int id){
         return rickAndMortyApiService.getCharacterById(id);
     }
+
+    @GetMapping("/?name=rick&status=alive")
+    public RickAndMortyApiResponseResults getCharactersByAliveStatus (){
+        return rickAndMortyApiService.getCharactersByAliveStatus();
+    }
+
 }
