@@ -21,6 +21,10 @@ public class RickAndMortyApiService {
 
     }
 
+    public RickAndMortyApiResponseResults getCharacterById (int id){
+       return this.restClient.get().uri("/character/"+ id).retrieve().body(RickAndMortyApiResponseResults.class); //Hier wird die GET Anfrage geschickt
+    }
+
 //    public static void main(String[] args){
 //        RestClient.Builder restClient1 = RestClient.builder();
 //        RickAndMortyApiService service = new RickAndMortyApiService(restClient1);
